@@ -1,0 +1,42 @@
+/* 挂载到高德地图容器内的 DOM，需全局样式（非 Vue scoped） */
+.mq-amap-user-root {
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+.mq-amap-beam {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 112px;
+  height: 112px;
+  margin-left: -56px;
+  margin-top: -56px;
+  pointer-events: none;
+  transform-origin: 50% 50%;
+  border-radius: 50%;
+  /* 指向上方的扇形区域，再通过 rotate(heading) 对准手机朝向 */
+  background: conic-gradient(
+    from 270deg at 50% 50%,
+    transparent 0deg 308deg,
+    rgba(66, 165, 245, 0.45) 308deg,
+    rgba(66, 165, 245, 0.12) 332deg,
+    transparent 332deg 360deg
+  );
+}
+
+.mq-amap-dot {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  margin-left: -9px;
+  margin-top: -9px;
+  border-radius: 50%;
+  background: #1a73e8;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.28);
+  z-index: 2;
+}

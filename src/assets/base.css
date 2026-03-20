@@ -1,0 +1,71 @@
+:root {
+  --mq-bg: #0f1714;
+  --mq-bg-elevated: #1a2622;
+  --mq-surface: #243330;
+  --mq-surface-soft: #2d3d38;
+  --mq-accent: #c9a227;
+  --mq-accent-soft: rgba(201, 162, 39, 0.2);
+  --mq-text: #e8ebe9;
+  --mq-text-muted: #9aa8a2;
+  --mq-border: rgba(255, 255, 255, 0.08);
+  --mq-safe-top: env(safe-area-inset-top, 0px);
+  --mq-safe-bottom: env(safe-area-inset-bottom, 0px);
+  --mq-nav-h: 56px;
+  --mq-radius: 14px;
+  --mq-tap-min: 48px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  min-height: 100dvh;
+  color: var(--mq-text);
+  background: var(--mq-bg);
+  line-height: 1.5;
+  font-family:
+    'PingFang SC',
+    'Hiragino Sans GB',
+    'Microsoft YaHei',
+    system-ui,
+    -apple-system,
+    sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#app {
+  min-height: 100dvh;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  touch-action: manipulation;
+}
+
+a {
+  color: var(--mq-accent);
+  text-decoration: none;
+}
